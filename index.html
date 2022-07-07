@@ -1,0 +1,1315 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Odak Solutions Pvt Ltd</title>
+
+    <!-- Favicon -->
+    <!--<link rel="icon" href="img/core-img/favicon.ico">-->
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700" rel="stylesheet">
+
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/classy-nav.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" type="text/css" href="slider/css/navstylechange.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="slider/css/noneed.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="slider/css/settings.css" media="screen" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <!-- Responsive Stylesheet -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        .light-version p {
+            color: #161616;
+        }
+        #contact p {
+            color:#161616;
+        }
+        .service_icon img
+        {
+            width:70px;
+        }
+        .our_team_area .btn.btn-common {
+            float: right !important;
+            color: #fff;
+            background-color: #fdba17 !important;
+        }
+        .form-control {
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 15px 30px;
+            font-size: 14px;
+            border-radius: 30px;
+            border: 1px solid #0000001c;
+            background: #ffffff;
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            transition: all 0.3s;
+        }
+        .services-block-four ol li, ul li {
+            list-style: disc;
+            padding-top: 17px;
+        }
+
+        ul {
+            margin-top: -16px;
+            margin-left: 14px;
+        }
+
+        .services-block-four {
+            height: 288px;
+        }
+
+        #services p {
+            font-size: 20px;
+            color: #273773;
+            padding-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .service_single_content {
+            height: 350px;
+        }
+
+            .service_single_content p {
+                font-size: 14px;
+                text-align: left;
+            }
+
+        .about-us-area .services-block-four {
+            height: auto;
+        }
+        .section-heading h2 {
+            font-size: 26px;
+        }
+        .services-block-four.v2
+        {
+            background-color:#fff;
+        }
+        p.wow
+        {
+            color:#fff;
+        }
+    </style>
+
+    <script type="text/javascript">
+
+
+
+        angular.module('MyApp', []).controller('MyController', function ($scope, $http, $window) {
+
+            $scope.ContactSubmit = function () {
+
+                var SaveData = {};
+
+                SaveData.FName = $scope.FName;
+
+                //SaveData.LName = $scope.LName;
+
+                SaveData.Mobile = $scope.Mobile;
+
+                SaveData.EmailID = $scope.EmailID;
+
+                SaveData.Message = $scope.Message;
+
+
+                var post = $http({
+
+                    method: "POST",
+
+                    //url: "WebService/WebContactEmail.asmx/SaveUserNew",
+
+                    url: "https://letit.navioindia.com/WebService/WebOdakContactEmail.asmx/SaveUserNew",
+
+                    dataType: 'json',
+
+                    data: { "json": JSON.stringify(SaveData) },
+
+                    headers: { "Content-Type": "application/json" }
+
+                });
+
+
+
+                post.success(function (data, status) {
+
+                    $window.alert("Email send successfully sender will receive a call shortly");
+
+                    $scope.FName = "";
+
+                    //$scope.LName = "";
+
+                    $scope.Mobile = "";
+
+                    $scope.EmailID = "";
+
+                    $scope.Message = "";
+
+                    // data.d;
+
+                });
+
+
+
+                post.error(function (data, status) {
+
+                    $window.alert(data.Message);
+
+                });
+
+            }
+
+
+
+        }
+
+        );
+
+
+
+
+
+    </script>
+</head>
+
+<body class="light-version">
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preload-content">
+            <div id="dream-load"></div>
+        </div>
+    </div>
+
+    <!-- ##### Header Area Start ##### -->
+    <header class="header-area fadeInDown" data-wow-delay="0.2s">
+        <div class="classy-nav-container light breakpoint-off">
+            <div class="container">
+                <!-- Classy Menu -->
+                <nav class="classy-navbar light justify-content-between" id="dreamNav">
+
+                    <!-- Logo -->
+                    <a class="nav-brand light" href="#"><img src="img/OdakLogo_Final.png" style="width: 230px; margin-top: 20px;" alt="logo"></a>
+
+                    <!-- Navbar Toggler -->
+                    <div class="classy-navbar-toggler demo">
+                        <span class="navbarToggler"><span></span><span></span><span></span></span>
+                    </div>
+
+                    <!-- Menu -->
+                    <div class="classy-menu">
+
+                        <!-- close btn -->
+                        <div class="classycloseIcon">
+                            <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                        </div>
+
+                        <!-- Nav Start -->
+                        <div class="classynav">
+                            <ul id="nav">
+                                <li><a href="#home">Home</a></li>
+                                <li><a href="#about">About</a></li>
+                                <li><a href="#services">Services</a></li>
+                                <li><a href="#whyodak">Why Odak Solutions</a></li>
+                                <li><a href="#pricing">Stage and Pricing</a></li>
+                                <li><a href="#contact">Contact</a></li>
+                            </ul>
+
+                            <!-- Button -->
+                            <!--<a href="#" class="btn login-btn ml-50">Free Try</a>-->
+                        </div>
+                        <!-- Nav End -->
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- ##### Header Area End ##### -->
+    <!-- ##### Welcome Area Start ##### -->
+    <section class="hero-section blue-bg relative section-padding" id="home">
+
+        <div class="hero-section-content">
+
+            <div class="container h-100">
+                <div class="row h-100 mb-50 align-items-center">
+
+                    <div class="row">
+
+                        <div class="col-md-6 padlr0" style="padding-top:55px;">
+                            <div class="welcome-content">
+                                <!--<div class="promo-section">
+                                    <h3 class="special-head gradient-text cyan">Business grow strategy is our mission</h3>
+                                </div>-->
+                                <h1 class="w-text wow fadeInUp" data-wow-delay="0.2s">Enable Accelerated Growth</h1>
+                                <img src="img/pic3.png" class="img-responsive" style="width:100%;" />
+                                <!--<div class="dream-btn-group wow fadeInUp" data-wow-delay="0.4s">
+                                    <a href="#" class="btn more-btn mr-3">contact us</a>
+                                    <a href="#" class="btn more-btn"> Learn more</a>
+                                </div>-->
+                            </div>
+                            <h3 style="font-size:25px; margin-bottom:10px; color:#013d79;"> <span style="color: #fdb913;"></span></h3>
+
+                            <span class="slidertitle" style="font-size:25px;color:#fff; font-weight:bold; padding-right:30px;">Innovate</span>  <span class="slidertitle" style="font-size:25px;color:#fdb913; font-weight:bold; padding-right:30px;">Realize</span>  <span class="slidertitle" style="font-size: 25px; color: #fff; font-weight: bold; padding-right: 30px;">Transform</span>
+
+
+
+                        </div>
+                        <div class="col-md-6 padlr0" style="text-align:right;">
+
+                            <div id="carousel-area" style="margin-top:25%;">
+                                <h3 style="font-size:25px; margin-bottom:10px; color:#fff;">What We Do</h3>
+                                <div id="carousel-slider" class="carousel slide carousel-fade" data-ride="carousel">
+                                    <ol class="carousel-indicators" style="margin-top:30px;">
+                                        <li data-target="#carousel-slider" data-slide-to="0" class="active"></li>
+                                        <li data-target="#carousel-slider" data-slide-to="1"></li>
+                                        <li data-target="#carousel-slider" data-slide-to="2"></li>
+                                    </ol>
+                                    <div class="carousel-inner" role="listbox">
+
+                                        <div class="carousel-item active">
+                                            <img src="slider/images/slider1/slider3new1.png" style="width:460px;  padding-bottom:80px;" alt="">
+                                            <div class="carousel-caption text-left" style="top:70%; font-weight:bold;">
+
+                                                <p class="wow fadeInRight" style="margin-top:30px;color:#fff;">
+                                                    We specialize in Business Process Services and Technology Solutions for Shipping and Logistics Industry
+
+                                                </p>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="carousel-item">
+                                            <img src="slider/images/slider1/circlenew3.png" style="width:460px;  padding-bottom:80px;" alt="">
+                                            <div class="carousel-caption text-left" style="top: 77%; font-weight: bold; ">
+
+                                                <p class="wow fadeInRight" style="padding-bottom: 30px; color: #fff;">
+                                                    We are experts in optimizing People, Process and Technology
+                                                </p>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="carousel-item">
+                                            <img src="slider/images/slider1/slider2new2.png" style="width:460px;  padding-bottom:80px;" alt="">
+                                            <div class="carousel-caption text-left" style="top: 70%; font-weight: bold;">
+
+                                                <p class="wow fadeInRight" style="color: #fff;">
+                                                    We help our clients significantly reduce costs, optimize business processes and enhance efficiency
+
+                                                </p>
+
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+                                    <a class="carousel-control-prev" href="#carousel-slider" role="button" data-slide="prev">
+                                        <span class="carousel-control" aria-hidden="true"><i class="lni-chevron-left"></i></span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                    <a class="carousel-control-next" href="#carousel-slider" role="button" data-slide="next">
+                                        <span class="carousel-control" aria-hidden="true"><i class="lni-chevron-right"></i></span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--<div class="col-12 col-lg-6 col-md-12">
+                        <div class="welcome-content">
+                            <div class="promo-section">
+                                <h3 class="special-head gradient-text cyan">Business grow strategy is our mission</h3>
+                            </div>
+                            <h1 class="w-text wow fadeInUp" data-wow-delay="0.2s">Let’s Create Something new and awesome Togeather </h1>
+                            <p class="g-text wow fadeInUp" data-wow-delay="0.3s">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae soluta, dignissimos aut, assumenda dolore totam natus qui cum vel omnis voluptates.</p>
+                            <div class="dream-btn-group wow fadeInUp" data-wow-delay="0.4s">
+                                <a href="#" class="btn more-btn mr-3">contact us</a>
+                                <a href="#" class="btn more-btn"> Learn more</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="main-ilustration main-ilustration-5"></div>
+                    </div>-->
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <div class="clearfix"></div>
+
+
+    <!--<section class="section-padding-0-0 relative clearfix" style="margin-top:-50px">
+    <div class="container">
+        <div class="has-shadow agency-sec">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12 ">
+                    <div class="services-block-four v2">
+                        <div class="inner-box">
+                            <div class="icon-img-box">
+                                <img src="img/features/f1.svg" alt="">
+                            </div>
+                            <h3><a href="#">Simplicity and Choice</a></h3>
+                            <div class="text">Lorem ipsum dolor sit amet, conse ctetur dolor adipisicing elit.</div>
+
+                            <div class="side-feature-list-item v2 ">
+                                <i class="fa fa-check check-mark-icon-font" aria-hidden="true"></i>
+                                <div class="foot-c-info">All PHP Apps Supported</div>
+                            </div>
+                            <div class="side-feature-list-item v2 ">
+                                <i class="fa fa-check check-mark-icon-font" aria-hidden="true"></i>
+                                <div class="foot-c-info">Innovative Control Panel</div>
+                            </div>
+                            <div class="side-feature-list-item v2 ">
+                                <i class="fa fa-check check-mark-icon-font" aria-hidden="true"></i>
+                                <div class="foot-c-info">Unlimited Applications</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 ">
+                    <div class="services-block-four v2">
+                        <div class="inner-box">
+                            <div class="icon-img-box">
+                                <img src="img/features/f2.svg" alt="">
+                            </div>
+                            <h3><a href="#">Worry-Free Experience</a></h3>
+                            <div class="text">Lorem ipsum dolor sit amet, conse ctetur dolor adipisicing elit.</div>
+                            <div class="side-feature-list-item v2 ">
+                                <i class="fa fa-check check-mark-icon-font" aria-hidden="true"></i>
+                                <div class="foot-c-info">All PHP Apps Supported</div>
+                            </div>
+                            <div class="side-feature-list-item v2 ">
+                                <i class="fa fa-check check-mark-icon-font" aria-hidden="true"></i>
+                                <div class="foot-c-info">Innovative Control Panel</div>
+                            </div>
+                            <div class="side-feature-list-item v2 ">
+                                <i class="fa fa-check check-mark-icon-font" aria-hidden="true"></i>
+                                <div class="foot-c-info">Unlimited Applications</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 ">
+                    <div class="services-block-four v2">
+                        <div class="inner-box">
+                            <div class="icon-img-box">
+                                <img src="img/features/f3.svg" alt="">
+                            </div>
+                            <h3><a href="#">Performance That Scale</a></h3>
+                            <div class="text">Lorem ipsum dolor sit amet, conse ctetur dolor adipisicing elit.</div>
+                            <div class="side-feature-list-item v2 ">
+                                <i class="fa fa-check check-mark-icon-font" aria-hidden="true"></i>
+                                <div class="foot-c-info">All PHP Apps Supported</div>
+                            </div>
+                            <div class="side-feature-list-item v2 ">
+                                <i class="fa fa-check check-mark-icon-font" aria-hidden="true"></i>
+                                <div class="foot-c-info">Innovative Control Panel</div>
+                            </div>
+                            <div class="side-feature-list-item v2 ">
+                                <i class="fa fa-check check-mark-icon-font" aria-hidden="true"></i>
+                                <div class="foot-c-info">Unlimited Applications</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </section>-->
+
+    <div class="clearfix"></div>
+
+    <!-- ##### About Us Area Start ##### -->
+    <section class="special section-padding-100-70 clearfix" id="about">
+
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12 col-lg-6 offset-lg-0 col-md-12 no-padding-left">
+                    <div class="welcome-meter wow fadeInUp mb-30" data-wow-delay="0.7s">
+                        <img src="img/core-img/digital-5.png" alt="">
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-6 offset-lg-0">
+                    <div class="who-we-contant">
+                        <div class="dream-dots text-left fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                            <span class="gradient-text blue" style="font-size:20px;">Our Services</span>
+                        </div>
+
+                        <p class="fadeInUp" data-wow-delay="0.4s">Shipping and Logistics industry is highly competitive with falling margins due to rate volatility and increasing operational cost. Logistics processes are complex in nature because of regulatory compliance and number of parties involved, every error result in additional cost, delay in service which leads customer dissatisfaction.</p>
+                        <p class="fadeInUp" data-wow-delay="0.4s">
+                            Odak has evolved in delivering Business Process Services and Technology Solutions for shipping and logistics industry leveraging our rich experience in domain and technology. We help clients unlock business value by applying proven process methodologies and business excellence frameworks to significantly reduce costs, enhance effectiveness and optimize business processes.
+                        </p>
+                        <p class="fadeInUp" data-wow-delay="0.4s">
+                            With Odak, clients are assured of a transparent business partner, best-in-class processes, speed of execution and quality in delivery.
+                        </p>
+                        <p class="fadeInUp" data-wow-delay="0.4s">
+                            We serve clients in all segments of shipping and logistics - Freight Forwarders, Liner, Non-Vessel Operating Common Carriers (NVOCC) and third-party logistics (3PL) firms.
+                        </p>
+                        <!--<div class="list-wrap align-items-center mb-20">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="side-feature-list-item">
+                                        <i class="fa fa-check-square-o check-mark-icon-font" aria-hidden="true"></i>
+                                        <div class="foot-c-info">Managed Sucre Backups</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="side-feature-list-item">
+                                        <i class="fa fa-check-square-o check-mark-icon-font" aria-hidden="true"></i>
+                                        <div class="foot-c-info">PHP 7 Ready Servers</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="side-feature-list-item">
+                                        <i class="fa fa-check-square-o check-mark-icon-font" aria-hidden="true"></i>
+                                        <div class="foot-c-info">Advanced Caching</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="side-feature-list-item">
+                                        <i class="fa fa-check-square-o check-mark-icon-font" aria-hidden="true"></i>
+                                        <div class="foot-c-info">24/7 Expert Support</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="side-feature-list-item">
+                                        <i class="fa fa-check-square-o check-mark-icon-font" aria-hidden="true"></i>
+                                        <div class="foot-c-info">Unlimited Applications</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="side-feature-list-item">
+                                        <i class="fa fa-check-square-o check-mark-icon-font" aria-hidden="true"></i>
+                                        <div class="foot-c-info">Optimized Stack</div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>-->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+   
+
+    <section class=" fuel-features features  clearfix" id="services"  style="background-color: #f4f9ff;">
+
+        <div class="container-fluid has-shadow">
+            <div class="section-heading text-center" style="padding-top:40px;">
+                <!-- Dream Dots -->
+                <div class="dream-dots justify-content-center fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                    <span class="gradient-text blue">OUR SERVICES</span>
+                </div>
+                <h2 class="wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">Business Process Services</h2>
+                <p style="text-align:center;" class="wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">Liner Shipping Services</p>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-3 col-md-6 col-sm-12 mt-md-30">
+                    <div class="services-block-four v2">
+                        <div class="inner-box">
+                            <div class="icon-img-box">
+                                <img src="img/icons/export.png" alt="">
+                            </div>
+                            <h3><a href="#">Export</a></h3>
+                            <div class="text">
+                                <ul>
+                                    <li>Bill of Lading Preparation and Finalization</li>
+                                    <li>Terminal Departure Reporting</li>
+                                    <li>Vessel Certificates</li>
+                                    <li>Billing and Invoicing</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a href="#" class="icon_foot">
+                            <i class="fa fa-long-arrow-right"></i>
+                        </a>
+                    </div>
+
+
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 mt-md-30">
+                    <div class="services-block-four v2">
+                        <div class="inner-box">
+                            <div class="icon-img-box">
+                                <img src="img/icons/import1.png" alt="">
+                            </div>
+                            <h3><a href="#">Import</a></h3>
+                            <div class="text">
+                                <ul>
+                                    <li>Import Manifest Preparation and Filings process</li>
+                                    <li>Arrival Notifications</li>
+                                    <li>Delivery Order Issuance</li>
+                                    <li>Billing and Invoicing</li>
+                                    <li>Transshipments</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a href="#" class="icon_foot">
+                            <i class="fa fa-long-arrow-right"></i>
+                        </a>
+                    </div>
+
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 mt-md-30 mt-sm-0">
+                    <div class="services-block-four v2">
+                        <div class="inner-box">
+                            <div class="icon-img-box">
+                                <img src="img/icons/operations.png" alt="">
+                            </div>
+                            <h3><a href="#">Operations</a></h3>
+                            <div class="text">
+                                <ul>
+                                    <li>Inventory Management</li>
+                                    <li>Maintenance and Repairs</li>
+                                    <li>Vessel Schedules</li>
+                                    <li>Vessel Performance Reports</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a href="#" class="icon_foot">
+                            <i class="fa fa-long-arrow-right"></i>
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-12 mt-md-30 mt-sm-0">
+                    <div class="services-block-four v2">
+                        <div class="inner-box">
+                            <div class="icon-img-box">
+                                <img src="img/icons/accounting.png" alt="">
+                            </div>
+                            <h3><a href="#">Accounting</a></h3>
+                            <div class="text">
+                                <ul>
+                                    <li>Party Accounting</li>
+                                    <li>General Accounting</li>
+                                    <li>Payments and Collections</li>
+                                    <li>Financial Reporting</li>
+                                    <li>Statutory Reporting</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a href="#" class="icon_foot">
+                            <i class="fa fa-long-arrow-right"></i>
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+            <p style="text-align:center;" class="wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">Freight Forwarding Services</p>
+            <div class="row align-items-center">
+                <div class="col-lg-3 col-md-6 col-sm-12 mt-md-30">
+                    <div class="services-block-four v2">
+                        <div class="inner-box">
+                            <div class="icon-img-box">
+                                <img src="img/icons/export.png" alt="">
+                            </div>
+                            <h3><a href="#">Export</a></h3>
+                            <div class="text">
+                                <ul>
+                                    <li>Bill of Lading Preparation and Finalization</li>
+                                    <li>Pre-alerts to Overseas Agents</li>
+                                    <li>Shipping Instruction Submission to Carrier and coordination</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a href="#" class="icon_foot">
+                            <i class="fa fa-long-arrow-right"></i>
+                        </a>
+                    </div>
+
+
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 mt-md-30">
+                    <div class="services-block-four v2">
+                        <div class="inner-box">
+                            <div class="icon-img-box">
+                                <img src="img/icons/import1.png" alt="">
+                            </div>
+                            <h3><a href="#">Import</a></h3>
+                            <div class="text">
+                                <ul>
+                                    <li>Coordination with Agents for Documentation</li>
+                                    <li>Carrier Coordination's</li>
+                                    <li>IGM Submission to Carrier and Coordination</li>
+                                    <li>Delivery order issuance</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a href="#" class="icon_foot">
+                            <i class="fa fa-long-arrow-right"></i>
+                        </a>
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-3 col-md-6 col-sm-12 mt-md-30 mt-sm-0">
+                    <div class="services-block-four v2">
+                        <div class="inner-box">
+                            <div class="icon-img-box">
+                                <img src="img/icons/accountingblue.png" alt="">
+                            </div>
+                            <h3><a href="#">Accounting</a></h3>
+                            <div class="text">
+                                <ul>
+                                    <li>Billing and Invoicing</li>
+                                    <li>Carrier invoice follow up and Payment Coordination</li>
+                                    <li>Invoices to Customer /Agent</li>
+                                    <li>Payment follow ups</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a href="#" class="icon_foot">
+                            <i class="fa fa-long-arrow-right"></i>
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="section-heading text-center" style="padding-top:40px; padding-bottom:30px; margin-bottom:0;">
+                <div class="container">
+                    <h2 class="wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">Technology Solutions and Services</h2>
+                    <p style="font-size:14px;font-weight:normal;color:#808080;" class="wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+                        Odak combines the power of Web and Mobile Applications, Business Intelligence, Artificial Intelligence and Blockchain to help customer transform their business. Our suite of software and services, together with our rich partner ecosystem helps companies drive greater business efficiency and deliver world class customer service. Companies working with Odak have been able to reduce cost and increase in business efficiency while significantly boosting the customer experience they deliver.
+                    </p>
+
+                    <h2 style="font-size:23px;text-align:left;" class="wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">Solutions</h2>
+                    <ul>
+                        <li style="text-align:left;">Next Generation ERP Application - Freight Forwarding</li>
+                        <li style="text-align:left;">Sales Daily Monitoring Reporting</li>
+                        <li style="text-align:left;">Agency Business Development</li>
+                        <li style="text-align:left;">Human Resource Management System</li>
+                    </ul>
+
+                    <h2 style="font-size:23px;text-align:left; padding-top:20px;" class="wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">Technologies</h2>
+                    <div class="row" style="margin-top:30px;">
+                        <div class="col-md-12 tech">
+                            <table class="table" style="width:50%;">
+                                <tbody>
+                                    <tr>
+                                        <td style="width:160px; font-size:14px; background-color:#8fddc3; color: #013d79; text-transform:uppercase; vertical-align: middle; font-weight:bold;">Web Applications</td>
+                                        <td><span><img src="img/technology/web/web.jpg" style="width:320px;"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width:160px; font-size:14px; background-color:#8fddc3; color: #013d79; text-transform:uppercase; vertical-align: middle; font-weight:bold;">Mobile</td>
+                                        <td><span><img src="img/technology/mobile/mobile.jpg" style="width:320px;"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width:160px; font-size:14px; background-color:#8fddc3; color: #013d79; text-transform:uppercase; vertical-align: middle; font-weight:bold;">Block Chain</td>
+                                        <td><span><img src="img/technology/blockchain/blockchain.jpg" style="width:320px;"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width:160px; border-bottom: 2px solid #546E7A; font-size:14px; background-color:#8fddc3; color: #013d79; text-transform:uppercase; vertical-align: middle; font-weight:bold;">Business and Artificial Intelligence</td>
+                                        <td style="border-bottom: 2px solid #546E7A;"><span><img src="img/technology/business/business.jpg" style="width:320px;"></span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+
+                            <!--<div class="col-md-3"><img src="img/technology/web/dotnet.jpg" class="img-responsive" /></div>
+                            <div class="col-md-3"><img src="img/technology/web/nodejs.png" class="img-responsive" /></div>
+                            <div class="col-md-3"><img src="img/technology/web/angularjs.png" class="img-responsive" /></div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+
+
+
+
+    <!-- ##### FAQ & Timeline Area Start ##### -->
+    <div class="faq-timeline-area section-padding-100-85" id="whyodak">
+        <div class="container">
+            <div class="section-heading text-center">
+                <!-- Dream Dots -->
+                <div class="dream-dots justify-content-center fadeInUp" data-wow-delay="0.2s">
+                    <span class="gradient-text blue">Why Odak Solutions</span>
+                </div>
+                <h2 class="fadeInUp" data-wow-delay="0.3s">About Odak Solutions</h2>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-12 col-lg-6 offset-lg-0 col-md-8 offset-md-2 col-sm-12">
+                    <img src="img/core-img/digital-3.png" alt="" class="center-block img-responsive">
+                </div>
+                <div class="col-12 col-lg-6 col-md-12">
+                    <div class="dream-faq-area mt-s ">
+                        <dl style="margin-bottom:0">
+                            <!-- Single FAQ Area -->
+                            <dt class="v2 wave fadeInUp" data-wow-delay="0.2s">Who We Are</dt>
+                            <dd class="fadeInUp" data-wow-delay="0.3s">
+                                <p>
+                                    Odak Solutions was founded by a team of professionals with diverse domain experience and industry knowledge. Odak is partnered with DARTexon, a company focuses on Artificial Intelligence and Blockchain solutions.
+                                </p>
+                            </dd>
+                            <!-- Single FAQ Area -->
+                            <dt class="v2 wave fadeInUp" data-wow-delay="0.3s">What We Do</dt>
+                            <dd>
+                                <p>
+                                    We deliver business process services for shipping and logistics industries across documentation, operations and accounting functions.
+                                </p>
+                            </dd>
+                            <!-- Single FAQ Area -->
+                            <dt class="v2 wave fadeInUp" data-wow-delay="0.4s">Why Choose Us</dt>
+                            <dd>
+                                <p>
+                                    We have deep industry, process and technology expertise
+                                    We focus on business outcomes with end to end approach
+                                    We support client in change management
+                                    Our staff are Trained and customer focused
+                                </p>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- ##### FAQ & Timeline Area End ##### -->
+    <!-- ##### Our Services Area Start ##### -->
+    <section class="section-padding-100-70 ico-about-bg relative clearfix">
+        <div class="container">
+
+            <div class="section-heading text-center">
+                <!-- Dream Dots -->
+                <div class="dream-dots justify-content-center fadeInUp" data-wow-delay="0.2s">
+                    <span class="gradient-text blue">OUR FEATURES</span>
+                </div>
+                <h2 class="fadeInUp" data-wow-delay="0.3s">Odak Differentiators</h2>
+
+            </div>
+
+
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <!-- Content -->
+                    <div class="service_single_content text-left mb-100 fadeInUp" data-wow-delay="0.2s">
+                        <!-- Icon -->
+                        <div class="service_icon">
+                            <img src="img/icons/experience.png" alt="">
+                        </div>
+                        <h6>Expertise</h6>
+                        <p>Team with years of combined shipping and technology expertise.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <!-- Content -->
+                    <div class="service_single_content text-left mb-100 fadeInUp" data-wow-delay="0.3s">
+                        <!-- Icon -->
+                        <div class="service_icon">
+                            <img src="img/icons/diamond.png" alt="">
+                        </div>
+                        <h6>Value</h6>
+                        <p>Quality and excellent services adding business value to customer at optimized cost.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <!-- Content -->
+                    <div class="service_single_content text-left mb-100 fadeInUp" data-wow-delay="0.4s">
+                        <!-- Icon -->
+                        <div class="service_icon">
+                            <img src="img/icons/exchange.png" alt="">
+                        </div>
+                        <h6>Scalability</h6>
+                        <p>
+                            Easily scalable service capacity model.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <!-- Content -->
+                    <div class="service_single_content text-left mb-100 fadeInUp" data-wow-delay="0.4s">
+                        <!-- Icon -->
+                        <div class="service_icon">
+                            <img src="img/icons/customer-service.png" alt="">
+                        </div>
+                        <h6>Support</h6>
+                        <p>
+                            Regional and Local support Capabilities including in-region language support.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <!-- Content -->
+                    <div class="service_single_content text-left mb-100 fadeInUp" data-wow-delay="0.2s">
+                        <!-- Icon -->
+                        <div class="service_icon">
+                            <img src="img/icons/shield.png" alt="">
+                        </div>
+                        <h6>Security</h6>
+                        <p>Comprehensive Security process and multiple layers of security access.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <!-- Content -->
+                    <div class="service_single_content text-left mb-100 fadeInUp" data-wow-delay="0.3s">
+                        <!-- Icon -->
+                        <div class="service_icon">
+                            <img src="img/icons/target.png" alt="">
+                        </div>
+                        <h6>Business Continuity Plan</h6>
+                        <p>A designated primary/secondary backups with well defined business continuity Plan.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <!-- Content -->
+                    <div class="service_single_content text-left mb-100 fadeInUp" data-wow-delay="0.4s">
+                        <!-- Icon -->
+                        <div class="service_icon">
+                            <img src="img/icons/growth.png" alt="">
+                        </div>
+                        <h6>Business Intelligence Reports</h6>
+                        <p>
+                            Domain specific Intelligent reports empowering customers to take data driven decisions.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <!-- Content -->
+                    <div class="service_single_content text-left mb-100 fadeInUp" data-wow-delay="0.4s">
+                        <!-- Icon -->
+                        <div class="service_icon">
+                            <img src="img/icons/team.png" alt="">
+                        </div>
+                        <h6>Dedicated Team</h6>
+                        <p>
+                            Dedicated Team to promptly resolve any issues, with a keen customer emphasis.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="section-heading text-center">
+                <h2 class="fadeInUp" data-wow-delay="0.3s">Key Benefits</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p>
+                        Logistics and Freight Forwarding is highly competitive business, to keep up with that it becomes imperative to outsource some of the activities to avail professional management of such activities and relieve yourself so that you can focus on core competency areas.
+                    </p>
+                    <p>
+                        Our team of experienced and quality service-oriented professionals who productively provide such services to you to help your business expand and achieve your vision.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <!-- Content -->
+                    <div class="service_single_content text-left mb-100 fadeInUp" data-wow-delay="0.2s">
+                        <!-- Icon -->
+                        <div class="service_icon">
+                            <img src="img/icons/low-cost.png" alt="">
+                        </div>
+                        <h6>Cost Reduction</h6>
+                        <p>Process optimization and leveraging of technologies results in cost reduction</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <!-- Content -->
+                    <div class="service_single_content text-left mb-100 fadeInUp" data-wow-delay="0.3s">
+                        <!-- Icon -->
+                        <div class="service_icon">
+                            <img src="img/icons/target (1).png" alt="">
+                        </div>
+                        <h6>Customer Impact</h6>
+                        <p>Consistent quality services results in customer satisfaction</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <!-- Content -->
+                    <div class="service_single_content text-left mb-100 fadeInUp" data-wow-delay="0.3s">
+                        <!-- Icon -->
+                        <div class="service_icon">
+                            <img src="img/icons/planning.png" alt="">
+                        </div>
+                        <h6>Process Control and Visibility</h6>
+                        <p>Real time dashboards and alerts provide better visibility</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <!-- Content -->
+                    <div class="service_single_content text-left mb-100 fadeInUp" data-wow-delay="0.3s">
+                        <!-- Icon -->
+                        <div class="service_icon">
+                            <img src="img/icons/focus.png" alt="">
+                        </div>
+                        <h6>Focus on core business</h6>
+                        <p>We help customer to bring down their operational effort, resulting in bandwidth for core business and strategy.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="about-us-area special section-padding-0-70 clearfix" id="pricing">
+        <div class="container">
+            <div class="section-heading text-center">
+                <!-- Dream Dots -->
+                <div class="dream-dots justify-content-center fadeInUp" data-wow-delay="0.2s">
+                    <span class="gradient-text blue">Stage and Pricing</span>
+                </div>
+                <h2 class="fadeInUp" data-wow-delay="0.3s">Implementation Stages</h2>
+
+            </div>
+            <div class="row align-items-center">
+
+                <div class="services-column col-lg-6 col-xs-12">
+
+                    <div class="services-block-four how">
+                        <div class="inner-box">
+                            <div class="step">1</div>
+                            <h3><a class="normal" href="#">Understanding requirements</a></h3>
+                            <div class="text">We will understand your processes, challenges and service requirements.</div>
+
+                        </div>
+                    </div>
+
+                    <div class="services-block-four how">
+                        <div class="inner-box">
+                            <div class="step">2</div>
+                            <h3><a class="normal" href="#">Contract Finalization</a></h3>
+                            <div class="text">Finalization of commercial model and Service Level Agreements</div>
+                        </div>
+                    </div>
+
+                    <div class="services-block-four how">
+                        <div class="inner-box">
+                            <div class="step">3</div>
+                            <h3><a class="normal" href="#">Service Transition</a></h3>
+                            <div class="text">Process documentation, infrastructure setup, Training & deployment of resources.</div>
+                        </div>
+                    </div>
+
+                    <div class="services-block-four how" style="margin-bottom:0">
+                        <div class="inner-box">
+                            <div class="step">4</div>
+                            <h3><a class="normal" href="#">Service Delivery</a></h3>
+                            <div class="text">Delivering of the services and SLA reporting. Feedback and continual improvements.</div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-12 col-lg-6 no-padding-right">
+                    <div class="welcome-meter fadeInUp" data-wow-delay="0.7s">
+                        <img class="img-responsive center-block mb-30" alt="" src="img/core-img/digital-4.png">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="section-heading text-center" style="padding-top:40px;">
+                <!-- Dream Dots -->
+                <div class="dream-dots justify-content-center fadeInUp" data-wow-delay="0.2s">
+                </div>
+                <h2 class="fadeInUp" data-wow-delay="0.3s">Pricing</h2>
+
+            </div>
+            <p>We offer our customers with cost-competitive services without compromising on quality. We will provide you with customized pricing that is Influenced by below factors</p>
+
+            <div class="row" style="margin-top:20px;">
+                <div class="col-md-6 wow fadeInLeftBig animated" style="visibility: visible; margin-bottom:40px;">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img src="img/icons/target (2).png" class="img-responsive" style="width:70px;">
+                        </div>
+                        <div class="col-md-9" style="font-size:15px; color: #003d79; padding-top:20px; margin-left:-55px; margin-top:-9px; padding-left:21px;">
+                            Scope and term of the project.
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-6 wow fadeInRightBig animated" style="visibility: visible; margin-bottom: 40px;">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img src="img/icons/mind.png" class="img-responsive" style="width:70px;">
+                        </div>
+                        <div class="col-md-9" style="font-size:15px; color: #003d79; padding-top:20px; margin-left:-55px; margin-top:-9px; padding-left:21px;">
+                            Skill level and effort requirements of the team
+
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-6 wow fadeInLeftBig animated" style="visibility: visible;">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img src="img/icons/requirement.png" class="img-responsive" style="width:70px;">
+                        </div>
+                        <div class="col-md-9" style="font-size:15px; color: #003d79; padding-top:20px; margin-left:-55px; margin-top:-9px; padding-left:21px;">
+                            Number and Complexity of the business requirements.
+
+
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 wow fadeInRightBig animated" style="visibility: visible;">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img src="img/icons/process.png" class="img-responsive" style="width:70px;">
+                        </div>
+                        <div class="col-md-9" style="font-size:15px; color: #003d79; padding-top:20px; margin-left:-55px; margin-top:-9px; padding-left:21px;">
+                            Technology and software to be used in the project
+
+
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <!--<section class="pricing section-padding-100-70" style="background: #edf6fd" id="pricing">
+
+        <div class="container">
+            <div class="section-heading text-center">-->
+                <!-- Dream Dots -->
+                <!--<div class="dream-dots justify-content-center fadeInUp" data-wow-delay="0.2s">
+                    <span class="gradient-text blue">PRICING PLANS</span>
+                </div>
+                <h2 class="fadeInUp" data-wow-delay="0.3s">Our Pricing Plans</h2>
+                <p class="fadeInUp" data-wow-delay="0.4s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis accumsan nisi Ut ut felis congue nisl hendrerit commodo.</p>
+            </div>
+            <div class="row no-gutters">-->
+                <!-- Single Table -->
+                <!--<div class="col-lg-4 col-md-6">
+                    <div class="single_price_table_content text-center wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                        <div class="price_table_text">
+                            <h5>Begginer</h5>
+                            <h1>Free</h1>
+                            <p>Always</p>
+                        </div>
+                        <div class="table_text_details">
+                            <p>250GB Bandwidth</p>
+                            <p>08 Email Account</p>
+                            <p>Unlimited Database </p>
+                            <p>10GB Free Disk </p>
+                            <p>24/7 Support</p>
+                        </div>
+                        <div class="table_btn mt-50">
+                            <a href="#" class="btn more-btn">Start</a>
+                        </div>
+                    </div>
+                </div>-->
+                <!-- Single Table -->
+                <!--<div class="col-lg-4 col-md-6">
+                    <div class="single_price_table_content active text-center wow fadeIn" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeIn;">
+                        <div class="price_table_text">
+                            <h5>Business</h5>
+                            <h1>$24.99</h1>
+                            <p>Per Month</p>
+                        </div>
+                        <div class="table_text_details">
+                            <p>250GB Bandwidth</p>
+                            <p>08 Email Account</p>
+                            <p>Unlimited Database </p>
+                            <p>10GB Free Disk </p>
+                            <p>24/7 Support</p>
+                        </div>
+                        <div class="table_btn mt-50">
+                            <a href="#" class="btn more-btn">Start</a>
+                        </div>
+                    </div>
+                </div>-->
+                <!-- Single Table -->
+                <!--<div class="col-lg-4 col-md-6">
+                    <div class="single_price_table_content text-center wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+                        <div class="price_table_text">
+                            <h5>professional</h5>
+                            <h1>$84.99</h1>
+                            <p>Per Month</p>
+                        </div>
+                        <div class="table_text_details">
+                            <p>250GB Bandwidth</p>
+                            <p>08 Email Account</p>
+                            <p>Unlimited Database </p>
+                            <p>10GB Free Disk </p>
+                            <p>24/7 Support</p>
+                        </div>
+                        <div class="table_btn mt-50">
+                            <a href="#" class="btn more-btn">Start</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>-->
+    <!-- ##### Pricing Area End ##### -->
+    <!-- ##### Footer Area Start ##### -->
+    <footer class="footer-area bg-img">
+
+        <!-- ##### team Area Start ##### -->
+        <div class="striples-bg">
+            <!-- ##### Team Area Start ##### -->
+            <section class="our_team_area section-padding-100-70 clearfix" id="contact">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="section-heading text-center">
+                                <!-- Dream Dots -->
+                                <div class="dream-dots justify-content-center fadeInUp" data-wow-delay="0.2s">
+                                    <span>Contact Us</span>
+                                </div>
+                                <h2 class="fadeInUp" data-wow-delay="0.3s">Reach Us</h2>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 wow fadeInUpBig animated" align="center" style="visibility: visible;text-align:center;">
+                            <img src="img/icons/map1.png" class="img-responsive" style="width: 40px; text-align: center; margin:0 auto;">
+                            <p style="margin-top: 15px; font-size: 16px; text-align: center; padding-top:10px;">
+                                No.279 &amp; 281, 06th Floor, Alsa Towers,
+                                P.H.Road, Kilpauk,
+                                Chennai,<br> TN - 600 010, India.
+                            </p>
+                        </div>
+                        <div class="col-md-4 wow fadeInUpBig animated" align="center" style="visibility: visible; text-align: center;">
+                            <img src="img/icons/email.png" class="img-responsive" style="width: 50px; text-align: center; margin: 0 auto; ">
+                            <p style="font-size: 16px; text-align: center; padding-top: 40px; ">
+                                info@odaksolutions.com
+                            </p>
+                        </div>
+                        <div class="col-md-4 wow fadeInUpBig animated" align="center" style="visibility: visible; text-align: center;">
+                            <img src="img/icons/phone.png" class="img-responsive" style="width: 50px; text-align: center; margin: 0 auto; ">
+                            <p style="font-size: 16px; text-align: center; padding-top: 20px;">
+                                +91 95002 66635<br>
+                                +91 95000 00755
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row" style="margin-top:40px;">
+                        <div class="col-lg-12 col-md-12 col-xs-12">
+                            <div class="contact-block">
+                                <div ng-app="MyApp" ng-controller="MyController">
+                                    <form id="contactForm">
+                                        <div class="row">
+                                            <div class="col-md-6 wow fadeInLeftBig">
+                                                <div class="form-group">
+                                                    <input name="fname" type="text" class="form-control" value="" placeholder="First Name *" id="txtName" ng-model="FName" required data-error="Please enter your name">
+                                                    <div class="help-block with-errors"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 wow fadeInRightBig">
+                                                <div class="form-group">
+                                                    <input name="mobile" type="text" class="form-control" value="" placeholder="Mobile *" id="txtMobile" ng-model="Mobile" required data-error="Please enter your email">
+                                                    <div class="help-block with-errors"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 wow fadeInLeftBig">
+                                                <div class="form-group">
+                                                    <input name="email" type="text" class="form-control" value="" placeholder="Your Email Address" id="txtEmail" ng-model="EmailID" required data-error="Please enter your subject">
+                                                    <div class="help-block with-errors"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 wow fadeInRightBig">
+                                                <div class="form-group">
+                                                    <textarea class="form-control" style="border-radius:unset;" name="message" cols="40" rows="3" placeholder="Your Message" id="txtMessage" ng-model="Message" rows="7" data-error="Write your message" required></textarea>
+                                                    <div class="help-block with-errors"></div>
+                                                </div>
+                                                <div class="submit-button" style="float:right;">
+                                                    <input type="submit" class="btn btn-common btn-effect" value="Submit" ng-click="ContactSubmit();" />
+                                                    <!--<input class="btn btn-common btn-effect" type="submit" name="submit" value="submit">-->
+                                                    <!--<button class="btn btn-common btn-effect" id="submit" type="submit">Send Message</button>-->
+                                                    <div id="msgSubmit" class="h3 hidden"></div>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+           
+        </div>
+        <!-- ##### team Area End ##### -->
+
+        <div class="footer-content-area mt-0" style="padding:20px;">
+            <div class="container">
+                <div class="row ">
+                    <div class="col-12 col-lg-12 col-md-12">
+                        <p style="color:#d0cece; text-align:center;"><span style="font-size:23px;">©</span> <span style="font-size:16px;">2019 Odak Solutions Private Limited</span></p>
+                    </div>
+
+                 
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <!-- ##### Footer Area End ##### -->
+    <!-- ########## All JS ########## -->
+    <!-- jQuery js -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Popper js -->
+    <script src="js/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- All Plugins js -->
+    <script src="js/plugins.js"></script>
+    <!-- Parallax js -->
+    <script src="js/dzsparallaxer.js"></script>
+
+    <script src="js/jquery.syotimer.min.js"></script>
+
+    <!-- script js -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
